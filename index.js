@@ -17,6 +17,9 @@ mongoose.connect(dbConfig.url, () => {
 mongoose.Promise = global.Promise;
 
 require('./routes/book.route')(app);
+require('./routes/issues.route')(app);
+require('./routes/member.route')(app);
+require('./routes/user.route')(app);
 
 app.listen(8080, () => {
     console.log('Server started successfully');
